@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Using CockroachDB cloud, so local postgres is optional
+  # postgres:
+  #   image: postgres:15
+  #   container_name: blogx_postgres
+  #   environment:
+  #     POSTGRES_DB: blog_x
+  #     POSTGRES_USER: blog_user
+  #     POSTGRES_PASSWORD: blog_password
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - blog_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: blogx_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - blogx_network
+
+volumes:
+  # postgres_data:
+  redis_data:
+
+networks:
+  blogx_network:
+    driver: bridge
