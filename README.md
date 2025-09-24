@@ -1,7 +1,7 @@
 # Blog-X
 
 A modern, professional blogging platform built with Next.js, NestJS, TypeScript, and PostgreSQL.
-NOTE-THIS PROJECT IS UNDER DEVELOPMENT
+<br>NOTE-THIS PROJECT IS UNDER DEVELOPMENT
 
 ## Features
 
@@ -101,3 +101,4 @@ npm run dev
 **GitHub:** [@hpx07](https://github.com/hpx07)
 
 ---
+
